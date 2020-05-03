@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mflamb/drm-mental-health-services.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mflamb/drm-mental-health-services/issues"
+  },
+  "homepage": "https://github.com/mflamb/drm-mental-health-services#readme",
+  "dependencies": {
+    "serverless-pseudo-parameters": "^2.5.0"
+  }
+}

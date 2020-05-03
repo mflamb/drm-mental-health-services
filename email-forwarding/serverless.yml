@@ -1,0 +1,33 @@
+service: email-forwarding
+tenant: mflamb
+app: davis-serverless-contact-form
+plugins:
+  - serverless-pseudo-parameters
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  profile: ${opt:profile, "drm-mhs"}
+  region: ${opt:region, self:custom.secrets.REGION}
+  stage: ${opt:stage, "dev"}
+  environment: 
+    EMAIL: ${self:custom.secrets.EMAIL}
+    DOMAIN: ${self:custom.secrets.DOMAIN}
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "ses:SendEmail"
+      Resource: "arn:aws:ses:${self:provider.region}:#{AWS::AccountId}:identity/${self:custom.secrets.EMAIL}"
+
+custom:
+  secrets: ${file(secrets.${self:provider.stage}.json)}
+  JCRLambdaName: ${self:service}-website-contact-form-${self:provider.stage}
+
+functions:
+  send:
+    handler: emailDavis.send
+    events:
+      - http:
+          path: email/send
+          method: POST
+          cors: true

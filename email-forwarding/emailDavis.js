@@ -2,6 +2,7 @@ const aws = require('aws-sdk');
 const ses = new aws.SES();
 const emailDavis = {};
 const myEmail = process.env.EMAIL;
+const sender = process.env.SENDER;
 const myDomain = process.env.DOMAIN;
 
 emailDavis.send = async (event) => {
@@ -47,7 +48,7 @@ emailDavis.generateEmailParams = body => {
   }
 
   return {
-    Source: myEmail,
+    Source: sender,
     Destination: { ToAddresses: [myEmail] },
     ReplyToAddresses: [email],
     Message: {
@@ -59,7 +60,7 @@ emailDavis.generateEmailParams = body => {
       },
       Subject: {
         Charset: 'UTF-8',
-        Data: `Message from ${name} via ${myDomain.substr(12)}`
+        Data: `Message from ${name} via ${myDomain.substr(8)}`
       }
     }
   }

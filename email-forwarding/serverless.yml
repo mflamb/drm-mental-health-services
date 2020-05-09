@@ -1,4 +1,4 @@
-service: email-forwarding
+service: drm-mhs-contact-form
 tenant: mflamb
 app: davis-serverless-contact-form
 plugins:
@@ -10,20 +10,20 @@ provider:
   profile: ${opt:profile, "drm-mhs"}
   region: ${opt:region, self:custom.secrets.REGION}
   stage: ${opt:stage, "dev"}
-  environment: 
+  environment:
     EMAIL: ${self:custom.secrets.EMAIL}
+    SENDER: ${self:custom.secrets.SENDER}
     DOMAIN: ${self:custom.secrets.DOMAIN}
   iamRoleStatements:
-    - Effect: "Allow"
+    - Effect: Allow
       Action:
-        - "ses:SendEmail"
-      Resource: "arn:aws:ses:${self:provider.region}:#{AWS::AccountId}:identity/${self:custom.secrets.EMAIL}"
+        - "ses:*"
+      Resource: "*"
 
 custom:
   secrets: ${file(secrets.${self:provider.stage}.json)}
   JCRLambdaName: ${self:service}-website-contact-form-${self:provider.stage}
 
-functions:
   send:
     handler: emailDavis.send
     events:

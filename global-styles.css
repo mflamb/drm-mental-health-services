@@ -4,6 +4,19 @@
   box-sizing: border-box; 
 }
 
+/* Trying a hack to stop iOS scroll bounce */
+html {
+  height  : 100%;
+  overflow: hidden;
+  position: relative;
+}
+body {
+  height  : 100%;
+  overflow: auto;
+  position: relative;
+}
+/* End iOS scroll bounce hack */
+
 body, .wrapper {
   margin: 0;
 }

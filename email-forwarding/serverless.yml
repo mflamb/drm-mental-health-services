@@ -24,6 +24,7 @@ custom:
   secrets: ${file(secrets.${self:provider.stage}.json)}
   JCRLambdaName: ${self:service}-website-contact-form-${self:provider.stage}
 
+functions:
   send:
     handler: emailDavis.send
     events:

@@ -55,7 +55,7 @@ emailDavis.generateEmailParams = body => {
       Body: {
         Text: {
           Charset: 'UTF-8',
-          Data: `Message sent from email ${email} by ${name} \nContent: ${content}`
+          Data: `Message sent from email ${email} by ${name} \n \nContent: \n \n${content}`
         }
       },
       Subject: {

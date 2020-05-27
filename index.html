@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163977067-2"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163977067-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-163977067-2');
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var botao = document.querySelectorAll('a[href="tel:+1-609-251-4659"]');
+      for (var i = 0; i < botao.length; i++) {
+        botao[i].addEventListener("click", function () {
+          gtag('event', "click", {
+            'event_category': "pt-phone"
+          });
+        })
+      }
+    })
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var botao = document.querySelectorAll('a[href="mailto:drodz76@gmail.com"]');
+      for (var i = 0; i < botao.length; i++) {
+        botao[i].addEventListener("click", function () {
+          gtag('event', "click", {
+            'event_category': "mail-me"
+          });
+        })
+      }
+    })
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -21,7 +44,7 @@
   <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
   <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -30,36 +53,42 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <title>Online Counseling with Davis Rodríguez Meléndez, LCSW - davisrmelendez.com</title>
-  <meta name="description" content="You are not alone. Contact me with your daily or other concerns via online counseling. My name is Davis Rodriguez Melendez. I completed my MSW at New York University with a concentration on Evidence-based Practices (EBP) and psychodynamic approaches.">
+  <meta name="description"
+    content="You are not alone. Contact me with your daily or other concerns via online counseling. My name is Davis Rodriguez Melendez. I completed my MSW at New York University with a concentration on Evidence-based Practices (EBP) and psychodynamic approaches.">
   <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
   <link rel="canonical" href="https://davisrmelendez.com/">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Online Counseling with Davis Rodríguez Meléndez, LCSW - davisrmelendez.com">
-  <meta property="og:description" content="You are not alone. Contact me with your daily or other concerns via online counseling. My name is Davis Rodriguez-Melendez. I completed my MSW at New York University with a concentration on Evidence-based Practices (EBP) and psychodynamic approaches.">
+  <meta property="og:description"
+    content="You are not alone. Contact me with your daily or other concerns via online counseling. My name is Davis Rodriguez-Melendez. I completed my MSW at New York University with a concentration on Evidence-based Practices (EBP) and psychodynamic approaches.">
   <meta property="og:url" content="https://davisrmelendez.com/">
   <meta property="og:site_name" content="davisrmelendez.com">
   <meta property="og:updated_time" content="2020-04-27T17:11:42+00:00">
-  <meta property="og:image" content="https://res.cloudinary.com/component/image/upload/v1587246235/main-headshot_ofpw3o.jpg">
-  <meta property="og:image:secure_url" content="https://res.cloudinary.com/component/image/upload/v1587246235/main-headshot_ofpw3o.jpg">
+  <meta property="og:image"
+    content="https://res.cloudinary.com/component/image/upload/v1587246235/main-headshot_ofpw3o.jpg">
+  <meta property="og:image:secure_url"
+    content="https://res.cloudinary.com/component/image/upload/v1587246235/main-headshot_ofpw3o.jpg">
   <meta property="og:image:width" content="658">
   <meta property="og:image:height" content="657">
   <meta property="og:image:alt" content="Online Counseling with Davis Rodríguez Meléndez, LCSW">
   <meta property="og:image:type" content="image/jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Online Counseling with Davis Rodríguez Meléndez, LCSW - davisrmelendez.com">
-  <meta name="twitter:description" content="You are not alone. Contact me with your daily or other concerns via online counseling. My name is Davis Rodriguez Melendez. I completed my MSW at New York University with a concentration on Evidence-based Practices (EBP) and psychodynamic approaches.">
-  <meta name="twitter:image" content="https://res.cloudinary.com/component/image/upload/v1587246235/main-headshot_ofpw3o.jpg">
+  <meta name="twitter:description"
+    content="You are not alone. Contact me with your daily or other concerns via online counseling. My name is Davis Rodriguez Melendez. I completed my MSW at New York University with a concentration on Evidence-based Practices (EBP) and psychodynamic approaches.">
+  <meta name="twitter:image"
+    content="https://res.cloudinary.com/component/image/upload/v1587246235/main-headshot_ofpw3o.jpg">
   <script type="application/json+ld">
   {"@context":"https:\/\/schema.org","@graph":[{"@type":"WebSite","@id":"https:\/\/davisrmelendez.com\/#website","url":"https:\/\/davisrmelendez.com","name":"admin","potentialAction":{"@type":"SearchAction","target":"https:\/\/davisrmelendez.com\/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"Article","headline":"Online Counseling with Davis Rodr\u00edguez Mel\u00e9ndez, LCSW - davisrmelendez.com","description":"You are not alone. Contact me with your daily or other concerns via online counseling. My name is Davis Rodriguez Melendez. I completed my MSW at New York University with a concentration on Evidence-based Practices (EBP) and psychodynamic approaches.","datePublished":"2020-04-15T19:42:16+00:00","dateModified":"2020-04-27T17:11:42+00:00","publisher":{"@type":"Organization","name":"admin","logo":{"@type":"ImageObject","url":false}},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/davisrmelendez.com\/"},"author":{"@type":"Person","name":"admin"},"image":{"@type":"ImageObject","url":"https:\/\/res.cloudinary.com\/component\/image\/upload\/v1587246235\/main-headshot_ofpw3o.jpg","width":658,"height":657}}]}
   </script>
   <link rel="stylesheet" type="text/css" href="/global-styles.css">
   <!-- AnyMod -->
   <script id="AnyMod-script">
-    (function (m,o,d,u,l,a,r,i,z,e) {
-      u[m]={Project:o,rq:[],Opts:r,ready:function(j){u[m].rq.push(j)}};function j(s){return encodeURIComponent(btoa(s))};z=l.getElementById(m+'-'+a);r=u.location;
-      e=[d+'/page/'+o+'/'+j(r.pathname)+'/'+j(r.host)+'?t='+Date.now(),d];e.map(function(w){i=l.createElement(a);i.defer=1;i.src=w;z.parentNode.insertBefore(i,z);});
-    })('AnyMod','836P93','https://cdn.anymod.com/v2',window,document,'script',{ toolkit: true, tips: true, priority: 3 });
+      (function (m, o, d, u, l, a, r, i, z, e) {
+        u[m] = { Project: o, rq: [], Opts: r, ready: function (j) { u[m].rq.push(j) } }; function j(s) { return encodeURIComponent(btoa(s)) }; z = l.getElementById(m + '-' + a); r = u.location;
+        e = [d + '/page/' + o + '/' + j(r.pathname) + '/' + j(r.host) + '?t=' + Date.now(), d]; e.map(function (w) { i = l.createElement(a); i.defer = 1; i.src = w; z.parentNode.insertBefore(i, z); });
+      })('AnyMod', '836P93', 'https://cdn.anymod.com/v2', window, document, 'script', { toolkit: true, tips: true, priority: 3 });
   </script>
   <!-- /AnyMod -->
   <!-- AnyMod assets -->
@@ -67,16 +96,18 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
   <!-- /AnyMod assets -->
 </head>
+
 <body>
   <div class="wrapper">
 
     <!-- Simple nav with sidebar -->
     <div id="anymod-mloord"></div>
-    
+
     <!-- Spectral Hero Intro -->
     <div id="anymod-ornbll"></div>
-    
+
   </div>
 
 </body>
+
 </html>
